@@ -1,11 +1,11 @@
-<header class="site-header">
+<header class="site-header slideInDown animated">
 
   <div class="wrapper">
     <!-- <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a> -->
     <nav class="site-nav">
       <!-- <a href="#" class="menu-icon"></a> -->
 
-      <div class="trigger">
+      <div class="trigger animated slideInDown">
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for my_page in sorted_pages %}
           {% if my_page.title %}
@@ -14,7 +14,5 @@
         {% endfor %}
       </div>
     </nav>
-
   </div>
-
 </header>
