@@ -1,23 +1,40 @@
 ---
-layout: default
+layout: home
 ---
 
 <div class="home">
+  <img class="avatar" src="{{ site.avatar }}" />
+  <h1 class="title">{{ site.home_headline }}
+  </h1>
+  {% if site.home_text %}
+  <p class="content-text home-desc">{{site.home_text}}</p>
+    {% endif %}
+    <div class="social">
+      <div class="contacts">
+        <a title="Blog" href="/blog" class="rounded multi-color">
+          <span class="fa fa-newspaper-o"></span>
+        </a>
+        {% if site.twitter_username %}
+        <a title="Twitter" href="https://twitter.com/{{ site.twitter_username }}" class="rounded multi-color">
+          <span  class="fa fa-twitter"></span>
+        </a>
+        {% endif %}
 
-  <h1 class="page-heading">Posts</h1>
+        {% if site.github_username %}
+        <a title="Github" href="https://github.com/{{ site.github_username }}" class="rounded multi-color">
+          <span class="fa fa-github"></span>
+        </a>
+        {% endif %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% if site.so_username %}
+        <a title="Stack Overflow" href="https://stackoverflow.com/users/{{ site.so_username }}" class="rounded multi-color">
+          <span class="fa fa-stack-overflow"></span>
+        </a>
+        {% endif %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+        <a title="RSS Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}" class="rounded multi-color">
+          <span class="fa fa-rss"></span>
+        </a>
+      </div>
+    </div>
 </div>

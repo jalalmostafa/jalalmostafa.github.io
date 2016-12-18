@@ -6,16 +6,20 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jalal's Blog 
+title: Jalal Mostafa
 email: jalalmostafa22@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This is my personal blog. I post stuff I encounter in life wherever
   and whenever they are. You will find science, techology, computer,
   networks and research.
-baseurl: "/blog"
+baseurl: ""
 url: "jalalmostafa.github.io" # the base hostname & protocol for your site
 twitter_username: jalalmostafa22
 github_username:  jalalmostafa
+so_username: 3289666
+avatar: https://upload.wikimedia.org/wikipedia/commons/3/38/4-Nature-Wallpapers-2014-1_ukaavUI.jpg
 
+home_headline: Jalal Mostafa
+home_text: "Hello There"
 # Build settings
 markdown: kramdown

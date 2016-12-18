@@ -1,0 +1,56 @@
+.home {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 25%;
+  padding: 10px;
+  margin-top: 30%;
+
+  .home-desc {
+    text-align: center;
+  }
+
+  .avatar {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $avatar-dimen;
+    height: $avatar-dimen;
+    border: 1px solid #E0E0E0;
+    border-radius: $avatar-radius;
+    display: block;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 32pt;
+  }
+  .social {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 10%;
+
+    .contacts {
+      text-align: center;
+      a {
+        font-size: 22pt;
+        text-decoration: none;
+      }
+
+      .rounded {
+        margin: 5px;
+        border: 1px solid;
+        border-radius: $contacts-dimen;
+        padding: 20px;
+        display: inline-block;
+        text-align: center;
+        height: $contacts-dimen;
+        width: $contacts-dimen;
+      }
+    }
+  }
+
+}

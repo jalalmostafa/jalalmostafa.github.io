@@ -204,3 +204,38 @@ pre {
         }
     }
 }
+
+
+.content-text {
+  font: $secondary-font-weight #{$secondary-font-size}/#{$secondary-line-height} $secondary-font-family;
+}
+
+.multi-color {
+  $length: length($multi-colors);
+  @for $i from 1 through $length {
+    &:nth-child(#{$length}n+#{$i}) {
+      $index: $i % $length;
+      @if $index == 0 {
+        $index: $index + $length;
+      }
+      $color: nth($multi-colors, $index);
+      color: $color;
+      border-color: $color;
+      * {
+        color: $color;
+      }
+    }
+    &:nth-child(#{$length}n+#{$i}):hover {
+      $index: $i % $length;
+      @if $index == 0 {
+        $index: $index + $length;
+      }
+      $color: nth($multi-colors, $index);
+      background-color: $color;
+      border-color: $color;
+      * {
+        color: $background-color;
+      }
+    }
+  }
+}
