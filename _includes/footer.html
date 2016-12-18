@@ -6,19 +6,46 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
+        <p class="footer-title">Site Map</p>
+        <ul>
+          <li>
+            <a href="{{ site.baseurl }}" title="Home">Home</a>
+          </li>
+          {% assign sorted_pages = site.pages | sort:"order" %}
+          {% for my_page in sorted_pages %}
+            {% if my_page.title %}
+            <li>
+              <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+        <p class="footer-title">Contacts</p>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <ul class="social-media-list">
+          {% if site.twitter_username %}
+          <li><a title="Twitter" class="no-border" href="https://twitter.com/{{ site.twitter_username }}">
+            <span class="fa fa-twitter fa-3x"></span>
+          </a></li>
+          {% endif %}
+          {% if site.github_username %}<li>
+          <a title="Github" class="no-border" href="https://github.com/{{ site.github_username }}">
+            <span class="fa fa-github fa-3x"></span>
+          </a></li>
+          {% endif %}
+
+          {% if site.so_username %}<li>
+          <a title="Stack Overflow" class="no-border" href="https://stackoverflow.com/users/{{ site.so_username }}">
+            <span class="fa fa-stack-overflow fa-3x"></span>
+          </a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
       </div>
     </div>
 

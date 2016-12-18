@@ -139,6 +139,16 @@
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
     margin-top: 45%;
+
+    a {
+      color: #111;
+      border-bottom: 1px dashed #111;
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: 1px solid #111;
+      }
+    }
 }
 
 .footer-heading {
@@ -150,6 +160,10 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+    margin-top: 10px;
+    li {
+      display: inline-block;
+    }
 }
 
 .footer-col-wrapper {
@@ -201,7 +215,9 @@
     }
 }
 
-
+.no-border {
+  border: none !important;
+}
 
 /**
  * Page content
