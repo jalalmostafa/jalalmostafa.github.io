@@ -225,7 +225,7 @@ pre {
         color: $color;
       }
     }
-    &:nth-child(#{$length}n+#{$i}):hover {
+    .contacts &:nth-child(#{$length}n+#{$i}):hover {
       $index: $i % $length;
       @if $index == 0 {
         $index: $index + $length;

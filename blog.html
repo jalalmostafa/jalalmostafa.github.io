@@ -1,0 +1,11 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+order: 1
+---
+<ul>
+{% for post in site.posts %}
+<li>{{ post.title }}</li>
+{% endfor %}
+</ul>
