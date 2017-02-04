@@ -23,3 +23,6 @@ home_headline: Jalal Mostafa
 home_text: "Hello There"
 # Build settings
 markdown: kramdown
+
+
+excerpt_separator: <!--more-->

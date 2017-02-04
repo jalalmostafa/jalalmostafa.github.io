@@ -6,6 +6,16 @@ order: 1
 ---
 <ul>
 {% for post in site.posts %}
-<li>{{ post.title }}</li>
+  <li class="post-item">
+    <div class="post-item-header">
+      <span class="post-item-title">
+        <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </span>
+      <span class="post-item-date">{{ post.date | date: '%B %d, %Y' }}</span>
+    </div>
+    {% if post.excerpt %}
+    <div class="post-item-excerpt">{{ post.excerpt }}</div>
+    {% endif %}
+  </li>
 {% endfor %}
 </ul>

@@ -71,7 +71,7 @@
       border-bottom: 1px dashed;
         // Gaps between nav items, but not on the last one
       &:not(:last-child) {
-          margin-right: 20px;
+          margin-right: 15px;
       }
 
       &:hover {
@@ -110,11 +110,10 @@
         .page-link {
             // display: block;
             // padding: 5px 10px;
-
+            margin-left: 20px;
             &:not(:last-child) {
                 margin-right: 0;
             }
-            margin-left: 20px;
         }
     }
 }
@@ -164,6 +163,15 @@
     li {
       display: inline-block;
     }
+}
+
+.footer-pages {
+  li {
+    display: inline-block;
+  }
+  li:not(:last-child):after {
+      content: '•';
+  }
 }
 
 .footer-col-wrapper {
@@ -224,6 +232,9 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    p {
+      text-align: justify;
+    }
 }
 
 .page-heading {
@@ -294,4 +305,34 @@
             font-size: 18px;
         }
     }
+}
+
+.post-item {
+  list-style-type: none;
+  border-bottom: 1px solid $grey-color-light;
+  padding: 10px;
+  .post-item-header {
+    .post-item-date {
+      font: $secondary-font-weight #{$secondary-font-size}/#{$secondary-line-height} $secondary-font-family;
+    }
+    .post-item-title {
+      width: 80%;
+      a {
+        font: $base-font-weight 2rem/#{$base-line-height} $base-font-family;
+        color: $text-color;
+      }
+      a:hover {
+        text-decoration: none;
+        color: lighten($text-color, 25%);
+      }
+    }
+    span {
+      display: inline-block;
+    }
+  }
+  .post-item-excerpt {
+    p {
+      text-align: justify;
+    }
+  }
 }
