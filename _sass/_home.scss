@@ -54,3 +54,19 @@
   }
 
 }
+
+.home-footer {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 10%;
+
+  @include media-query($on-palm) {
+    margin-top: 60%;
+  };
+  .footer-text {
+    // color: #2196F3;
+    color: #111;
+    border-bottom: 1px dashed #111;
+  }
+}
