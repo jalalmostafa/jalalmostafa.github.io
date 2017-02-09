@@ -245,7 +245,7 @@
 .post-list {
     margin-left: 0;
     list-style: none;
-
+    margin-right: 20px;
     > li {
         margin-bottom: $spacing-unit;
     }
@@ -311,13 +311,25 @@
 .post-item {
   list-style-type: none;
   border-bottom: 1px solid $grey-color-light;
+  display: inline-block;
   padding: 10px;
+  width: 100%;
   .post-item-header {
     .post-item-date {
       font: $secondary-font-weight #{$secondary-font-size}/#{$secondary-line-height} $secondary-font-family;
+      width: 20%;
+      text-align: right;
+      @include media-query($on-palm) {
+        width: 100%;
+      };
     }
     .post-item-title {
-      width: 80%;
+      width: 79%;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+      @include media-query($on-palm) {
+        width: 100%;
+      };
       a {
         font: $base-font-weight 2rem/#{$base-line-height} $base-font-family;
         color: $text-color;
@@ -335,5 +347,19 @@
     p {
       text-align: justify;
     }
+  }
+
+  .more {
+    padding: 0 2px;
+    float: right;
+    border-bottom: 1px dashed nth($multi-colors, 2);
+    color: nth($multi-colors, 2);
+  }
+
+  .more:hover {
+    float: right;
+    color: #2196F3;
+    text-decoration: none;
+    border-bottom: 1px solid nth($multi-colors, 2);
   }
 }

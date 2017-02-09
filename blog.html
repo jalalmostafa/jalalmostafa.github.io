@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 order: 1
 ---
-<ul>
+<ul class="post-list">
 {% for post in site.posts %}
   <li class="post-item">
     <div class="post-item-header">
@@ -16,6 +16,7 @@ order: 1
     {% if post.excerpt %}
     <div class="post-item-excerpt">{{ post.excerpt }}</div>
     {% endif %}
+    <a class="more" href="{{ post.url | prepend: site.baseurl }}">more!</a>
   </li>
 {% endfor %}
 </ul>
