@@ -1,11 +1,8 @@
 <footer class="site-footer">
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <span class="footer-text">Copyright &copy; 2017 {{ site.title }}</span>
+    <div class="footer-menu">
+      <h2 class="footer-heading">{{ site.title }}</h2>
       <ul class="footer-pages">
         <li>
           <a href="{{ site.baseurl }}" title="Home">Home</a>
@@ -19,9 +16,11 @@
           {% endif %}
         {% endfor %}
       </ul>
-
+      <span class="footer-text">Copyright &copy; 2017 {{ site.title }}</span>
+    </div>
+    <div class="contact-list footer-col-wrapper">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         <ul class="social-media-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           {% if site.twitter_username %}
           <li><a title="Twitter" class="no-border" href="https://twitter.com/{{ site.twitter_username }}">
             <span class="fa fa-twitter fa-3x"></span>

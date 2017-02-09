@@ -142,7 +142,20 @@
     margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
+.footer-menu {
+  display: inline-block;
+}
+
+.contact-list {
+  margin-left: 0 !important;
+  display: inline-block;
+  float: right;
+  @include media-query($on-palm) {
+    float: none;
+    margin-top: 20px;
+  };
+}
+
 .social-media-list {
     list-style: none;
     margin-left: 0;
@@ -153,6 +166,7 @@
 }
 
 .footer-pages {
+  margin-left: 0;
   li {
     display: inline-block;
   }
