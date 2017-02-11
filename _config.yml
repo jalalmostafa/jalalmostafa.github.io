@@ -26,7 +26,3 @@ markdown: kramdown
 
 
 excerpt_separator: <!--more-->
-
-sources:
-  - _assets/css
-  - _assets/js
