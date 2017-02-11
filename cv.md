@@ -24,7 +24,7 @@ order: 2
 
 ### Skills
 
-* **Languages** C/C++ – Assembly – Matlab – Java – Python – SQL – Bashs
+* **Languages** C/C++ – Assembly – Matlab – Java – Python – C# – SQL – Bash
 * **Software Engineering** Microservices - Strong OOP Skills - Software Design Patterns - Concurrent Programming - git - Jenkins
 * **Web Development** Django - JSF - jQuery - REST - SOAP - AngularJS - Bootstrap - Foundation
 * **Mobile Development** Android - Apache Cordova

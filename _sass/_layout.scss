@@ -65,6 +65,7 @@
     }
 
     .page-link {
+      color: black;
       font-size: 14pt;
       line-height: $base-line-height;
       text-transform: lowercase;
@@ -75,6 +76,7 @@
       }
 
       &:hover {
+        color: black;
         text-decoration: none;
         border-bottom: 1px solid;
       }
