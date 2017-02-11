@@ -5,7 +5,7 @@
       <h2 class="footer-heading">{{ site.title }}</h2>
       <ul class="footer-pages">
         <li>
-          <a href="{{ site.baseurl }}" title="Home">Home</a>
+          <a href="{{ site.url }}" title="Home">Home</a>
         </li>
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for page in sorted_pages %}
@@ -39,7 +39,5 @@
         </ul>
       </span>
     </div>
-
   </div>
-
 </footer>
