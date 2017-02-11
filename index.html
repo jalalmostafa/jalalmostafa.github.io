@@ -6,35 +6,32 @@ layout: home
   <img class="avatar" src="{{ site.avatar }}" />
   <h1 class="title">{{ site.home_headline }}
   </h1>
-  {% if site.home_text %}
+  {% if site.description %}
   <p class="content-text home-desc">{{site.description}}</p>
-    {% endif %}
-    <div class="social">
-      <div class="contacts">
-        <a title="Blog" href="/blog" class="rounded multi-color">
-          <span class="fa fa-newspaper-o"></span>
-        </a>
-        {% if site.twitter_username %}
-        <a title="Twitter" href="https://twitter.com/{{ site.twitter_username }}" class="rounded multi-color">
-          <span  class="fa fa-twitter"></span>
-        </a>
-        {% endif %}
-
-        {% if site.github_username %}
-        <a title="Github" href="https://github.com/{{ site.github_username }}" class="rounded multi-color">
-          <span class="fa fa-github"></span>
-        </a>
-        {% endif %}
-
-        {% if site.so_username %}
-        <a title="Stack Overflow" href="https://stackoverflow.com/users/{{ site.so_username }}" class="rounded multi-color">
-          <span class="fa fa-stack-overflow"></span>
-        </a>
-        {% endif %}
-
-        <a title="RSS Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}" class="rounded multi-color">
-          <span class="fa fa-rss"></span>
-        </a>
-      </div>
+  {% endif %}
+  <div class="social">
+    <div class="contacts">
+      <a title="Blog" href="/blog" class="rounded multi-color">
+        <span class="fa fa-newspaper-o"></span>
+      </a>
+      {% if site.twitter_username %}
+      <a title="Twitter" href="https://twitter.com/{{ site.twitter_username }}" class="rounded multi-color">
+        <span  class="fa fa-twitter"></span>
+      </a>
+      {% endif %}
+      {% if site.github_username %}
+      <a title="Github" href="https://github.com/{{ site.github_username }}" class="rounded multi-color">
+        <span class="fa fa-github"></span>
+      </a>
+      {% endif %}
+      {% if site.so_username %}
+      <a title="Stack Overflow" href="https://stackoverflow.com/users/{{ site.so_username }}" class="rounded multi-color">
+        <span class="fa fa-stack-overflow"></span>
+      </a>
+      {% endif %}
+      <a title="RSS Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}" class="rounded multi-color">
+        <span class="fa fa-rss"></span>
+      </a>
     </div>
+  </div>
 </div>
