@@ -6,12 +6,8 @@
       <!-- <a href="#" class="menu-icon"></a> -->
 
       <div class="trigger">
-        {% assign sorted_pages = site.pages | sort:"order" %}
-        {% for page in sorted_pages %}
-          {% if page.title and page.publish != false %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+        <a class="page-link" href="/blog/">blog</a>
+        <a class="page-link" href="http://bit.ly/jalal-mostafa-cv">cv</a>
       </div>
     </nav>
   </div>
