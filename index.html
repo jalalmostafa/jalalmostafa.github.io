@@ -11,9 +11,14 @@ layout: home
   {% endif %}
   <div class="social">
     <div class="contacts">
-      <a title="Blog" href="/blog" class="rounded multi-color">
-        <span class="fa fa-newspaper-o"></span>
+      <a title="CV" href="http://bit.ly/jalal-mostafa-cv" class="rounded multi-color">
+        <span class="resume">CV</span>
       </a>
+      {% if site.fivepixel_username %}
+      <a title="500px" href="https://500px.com/{{ site.fivepixel_username }}" class="rounded multi-color">
+        <span  class="fa fa-500px"></span>
+      </a>
+      {% endif %}
       {% if site.twitter_username %}
       <a title="Twitter" href="https://twitter.com/{{ site.twitter_username }}" class="rounded multi-color">
         <span  class="fa fa-twitter"></span>
@@ -29,9 +34,9 @@ layout: home
         <span class="fa fa-stack-overflow"></span>
       </a>
       {% endif %}
-      <a title="RSS Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}" class="rounded multi-color">
+      <!-- <a title="RSS Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}" class="rounded multi-color">
         <span class="fa fa-rss"></span>
-      </a>
+      </a> -->
     </div>
   </div>
 </div>
