@@ -1,0 +1,22 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+order: 1
+---
+<ul class="post-list">
+{% for post in site.posts %}
+  <li class="post-item">
+    <div class="post-item-header">
+      <span class="post-item-title">
+        <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </span>
+      <span class="post-item-date">{{ post.date | date: '%B %d, %Y' }}</span>
+    </div>
+    {% if post.excerpt %}
+    <div class="post-item-excerpt">{{ post.excerpt }}</div>
+    {% endif %}
+    <a class="more" href="{{ post.url | prepend: site.baseurl }}">more!</a>
+  </li>
+{% endfor %}
+</ul>

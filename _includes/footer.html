@@ -1,0 +1,43 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <div class="footer-menu">
+      <h2 class="footer-heading">{{ site.title }}</h2>
+      <ul class="footer-pages">
+        <li>
+          <a href="{{ site.url }}" title="Home">Home</a>
+        </li>
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for page in sorted_pages %}
+          {% if page.title and page.publish != false %}
+          <li>
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <span class="footer-text">Copyright &copy; 2017 {{ site.title }}</span>
+    </div>
+    <div class="contact-list">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <ul class="social-media-list">
+          {% if site.twitter_username %}
+          <li><a title="Twitter" class="no-border" href="https://twitter.com/{{ site.twitter_username }}">
+            <span class="fa fa-twitter fa-3x"></span>
+          </a></li>
+          {% endif %}
+          {% if site.github_username %}<li>
+          <a title="Github" class="no-border" href="https://github.com/{{ site.github_username }}">
+            <span class="fa fa-github fa-3x"></span>
+          </a></li>
+          {% endif %}
+          {% if site.so_username %}<li>
+          <a title="Stack Overflow" class="no-border" href="https://stackoverflow.com/users/{{ site.so_username }}">
+            <span class="fa fa-stack-overflow fa-3x"></span>
+          </a></li>
+          {% endif %}
+        </ul>
+      </span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,109 @@
+---
+layout: home
+---
+
+<div class="home">
+    <div style="display: flex; flex-wrap: wrap;">
+        <!-- <img class="avatar" src="{{ site.avatar }}" /> -->
+        <div style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;">
+            <h1 class="title">{{ site.home_headline }}
+            </h1>
+            <div>
+                {% if site.description %}
+                <p class="content-text home-desc">{{site.description}}</p>
+                {% endif %}
+                <div class="social">
+                    <div class="contacts">
+                        <a title="CV" href="http://bit.ly/jalal-mostafa-cv">
+                            <span class="resume">CV</span>
+                        </a>
+                        <a title="Blog EN" href="https://medium.com/@jalalmostafa">
+                            <span class="fa fa-medium"></span>
+                        </a>
+                        {% if site.fivepixel_username %}
+                        <a title="500px" href="https://500px.com/{{ site.fivepixel_username }}">
+                            <span class="fa fa-500px"></span>
+                        </a>
+                        {% endif %}
+                        {% if site.twitter_username %}
+                        <a title="Twitter" href="https://twitter.com/{{ site.twitter_username }}"
+                            class="rounded multi-color">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+                        {% endif %}
+                        {% if site.github_username %}
+                        <a title="Github" href="https://github.com/{{ site.github_username }}">
+                            <span class="fa fa-github"></span>
+                        </a>
+                        {% endif %}
+                        {% if site.so_username %}
+                        <a title="Stack Overflow" href="https://stackoverflow.com/users/{{ site.so_username }}">
+                            <span class="fa fa-stack-overflow"></span>
+                        </a>
+                        {% endif %}
+                        <a title="Google Scholar" href="https://scholar.google.com/citations?user=cQRNqIsAAAAJ&hl=en">
+                            <span class="fa fa-graduation-cap"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 30px;"></div>
+    <section class="section">
+        <header class="section-header">Latest News</header>
+        <article class="section-content">
+            <!--add news here -->
+            <div class="news">
+                <span class="news-date">Sept 2023</span>
+                <span class="news-paper">
+                    <div class="news-paper-header">Our paper "Are Kernel Drivers Ready For Accelerated Packet Processing
+                        using AF_XDP?" has been accepted at <a href="https://nfvsdn2023.ieee-nfvsdn.org/">IEEE NFV-SDN
+                            2023</a></div>
+                    <div class="news-paper-content">
+                    </div>
+                    <div class="news-paper-footer">
+                    </div>
+                </span>
+            </div>
+            <div class="news">
+                <span class="news-date">Sept 2022</span>
+                <span class="news-paper">
+                    <div class="news-paper-header">My first patch to the Linux kernel has been accepted!</div>
+                    <div class="news-paper-content">
+                        The patch is a fix to the new XDP sockets in the Linux kernel. It will improve the performance
+                        of the kernel-bypassing packet-processing technology by 2-3x! It enables
+                        <code>XDP_USE_NEED_WAKEUP</code> on <code>AF_XDP</code> sockets with
+                        <code>XDP_SHARED_UMEM</code> flag. The fix appears in <code>5.10.148</code>,
+                        <code>5.15.73</code>, <code>5.19.15</code>, and <code>6.0.1</code> in addition to
+                        <code>6.1+</code>
+                    </div>
+                    <div class="news-paper-footer">
+                        <a href="https://lore.kernel.org/lkml/YysO03uVFwGO8dHf@ipe420-102/T/" class="news-link">lore</a>
+                        <a href="https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf.git/commit/?id=60240bc26114"
+                            class="news-link">code</a>
+                    </div>
+                </span>
+            </div>
+            <div class="news">
+                <span class="news-date">July 2022</span>
+                <span class="news-paper">
+                    <div class="news-paper-header">SciTS paper is online!</div>
+                    <div class="news-paper-content">
+                        J. Mostafa, S. Wehbi, S. Chilingaryan, and A. Kopmann. 2022. SciTS: A Benchmark for
+                        Time-Series
+                        Databases in Scientific Experiments and Industrial Internet of Things. In 34th International
+                        Conference on Scientific and Statistical Database Management (SSDBM 2022). Association for
+                        Computing Machinery, New York, NY, USA, Article 12, 1–11.
+                    </div>
+                    <div class="news-paper-footer">
+                        <a href="https://doi.org/10.1145/3538712.3538723" class="news-link">ACM</a>
+                        <a href="https://arxiv.org/abs/2204.09795" class="news-link">arXiv</a>
+                        <a href="https://github.com/jalalmostafa/SciTS" class="news-link">code</a>
+                        <a href="https://www.youtube.com/watch?v=5ELAMMBLzuA" class="news-link">video</a>
+                    </div>
+                </span>
+            </div>
+        </article>
+    </section>
+</div>

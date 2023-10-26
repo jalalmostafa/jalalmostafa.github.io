@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Jalal Mostafa
+email:
+description: > # this means to ignore newlines until "baseurl:"
+  Ph.D. Candidate at KIT | Software Engineer
+baseurl: ""
+url: "jalalmostafa.github.io" # the base hostname & protocol for your site
+github_username: jalalmostafa
+so_username: 3289666
+avatar: img/avatar.jpg
+
+home_headline: Jalal Mostafa
+# Build settings
+markdown: kramdown
+excerpt_separator: <!--more-->
